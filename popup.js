@@ -1,23 +1,49 @@
-var clipboard = new Clipboard('.lenny');
+var clipboard = new Clipboard('.item');
 
-var lennyfaces = {
-  'lenny': {
-    'title' : 'lenny',
-    'faces':  [
+var allItems = {
+  'lennyfaces': {
+    'title' : 'faces',
+    'items':  [
      'ʢ◉ᴥ◉ʡ',
      '(◣_◢)'
    ]
- }
-  };
+ },
+ 'asciiart': {
+   'title' : 'ascii',
+   'items':  [
+    'ʢ◉ᴥ◉ʡʢ◉ᴥ◉ʡʢ◉ᴥ◉ʡ',
+    '(◣_◢)(◣_◢)(◣_◢)(◣_◢)'
+  ]
+ },
+ 'specialchars': {
+   'title' : 'chars',
+   'items':  [
+    'ʢ',
+    '◣'
+  ]
+ },
 
-var html = '';
+};
 
-for(var category in lennyfaces) {
-  html+='<div class="category">' + lennyfaces[category].title + '</div><div class="faces">';
-  for(var face in lennyfaces[category].faces) {
-    html+='<div class="lenny" text="' + lennyfaces[category].faces[face] + '">' + lennyfaces[category].faces[face] +'</div>';
-  }
-  html+='</div>';
+// nav
+for(var category in allItems) {
+  $("nav ul").append('<li class="on" data-category="' + category + '">' + allItems[category].title + '</li>');
+  $('section#content').append('<div class="category" id="' + category + '" style="display:none;">' + category + '</div>');
 }
+$("nav ul li").click(function(el) {
 
-document.getElementById('lennyfaces').innerHTML = html;
+
+    $('section#content div.category').hide();
+    $('section#content div.category#' + $(el.target).attr('data-category')).show();
+
+});
+
+/*
+for(var category in allItems) {
+
+  for(var item in allItems[category].items) {
+    html+='<button class="' + category + ' item" text="' + allItems[category].items[item] + '">' + allItems[category].items[item] +'</button>';
+  }
+}
+$('section#content').html(html);
+*/
