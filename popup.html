@@ -6,31 +6,42 @@
  -->
 <html>
   <head>
-    <title>Getting Started Extension's Popup</title>
+    <meta charset="UTF-8">
+    <title>Gimme a lenny face pls</title>
     <style>
+
       body {
-        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-family: Arial, sans-serif;
         font-size: 100%;
       }
-      #status {
-        /* avoid an excessively wide status text */
-        white-space: pre;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        max-width: 400px;
+      h1 {
+        font-size:50%;
+      }
+      .lenny {
+        text-align:center;
+        width:120px;
+        height: 40px;
+        background-color: white;
+        border:1px solid silver;
+        float:left;
       }
     </style>
 
-    <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
-     -->
-    <script src="popup.js"></script>
+    <script src="clipboard.js"></script>
+
+
   </head>
   <body>
-    <div id="status"></div>
-    <img id="image-result" hidden>
+
+    <h1>Click on a lenny face to copy it to your clipboard, then paste it in your editor</h1>
+
+    <div id="lennyfaces">
+      
+    </div>
+
+
+    <script src="popup.js"></script>
+
+
   </body>
 </html>
