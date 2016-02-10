@@ -21,7 +21,12 @@
         padding: 5px;
         margin: 0;
         width: 320px;
-
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none;   /* Chrome/Safari/Opera */
+        -khtml-user-select: none;    /* Konqueror */
+        -moz-user-select: none;      /* Firefox */
+        -ms-user-select: none;       /* IE/Edge */
+        user-select: none;           /* non-prefixed version, currently none */
       }
       h1 {
         color: white;
@@ -40,9 +45,9 @@
         -webkit-border-radius: 5;
         -moz-border-radius: 5;
         border-radius: 5px;
-        -webkit-box-shadow: 0px 1px 3px #666666;
-        -moz-box-shadow: 0px 1px 3px #666666;
-        box-shadow: 0px 1px 3px #666666;
+        -webkit-box-shadow: 0px 1px 1px #666666;
+        -moz-box-shadow: 0px 1px 1px #666666;
+        box-shadow: 0px 1px 1px #666666;
         color: #000000;
         font-size: 14px;
         background: #ffffff;
@@ -50,6 +55,8 @@
         text-decoration: none;
         text-align:center;
         cursor:pointer;
+        border-width: 1px;
+        margin: 2px;
       }
 
       .item:hover {
@@ -108,10 +115,10 @@
       }
 
       section#content {
-          overflow-y: scroll;
-          height: 326px;
-          background-color: white;
-          margin-bottom: 5px;
+        overflow-y: scroll;
+        height: 326px;
+        background-color: white;
+        margin-bottom: 5px;
       }
 
     </style>
