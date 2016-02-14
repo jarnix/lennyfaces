@@ -78,18 +78,9 @@ var init = function () {
         }
         $('section#content div.category#' + category).html(html);
     }
-
-    chrome.runtime.onInstalled.addListener(function () {
-        chrome.contextMenus.create({
-            title: "lenny face + ascii art + special chars",
-            id: 'lennyfaceasciiartspecialchars',
-            contexts: ["editable"],
-            onclick: addSelectorBelowInput
-        })
-    });
-
 }
 
+/*
 var addSelectorBelowInput = function () {
     chrome.runtime.sendMessage({
         action: 'addSelectorBelowInput'
@@ -97,19 +88,18 @@ var addSelectorBelowInput = function () {
 
     });
 }
-
-// addSelectorBelowInput = ext.addSelectorBelowInput;
+*/
 
 init();
+
 var clipboard = new Clipboard('.item');
 clipboard.on('success', function (e) {
-    chrome.runtime.sendMessage({
-        action: 'copy',
-        text: e.text
-    }, function (response) {
-        console.log('response');
-        console.log(response);
-        // console.log(response.farewell);
+    chrome.tabs.executeScript(null, {
+        code: "var toPaste = '" + e.text + "';"
+    }, function () {
+        chrome.tabs.executeScript(null, {
+            file: "paste.js"
+        })
     });
     e.clearSelection();
 });
