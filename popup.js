@@ -190,6 +190,9 @@ init();
 
 var clipboard = new Clipboard('.item');
 clipboard.on('success', function (e) {
+
+    $('#selection').text(e.text);
+
     chrome.tabs.executeScript(null, {
         code: "var toPaste = '" + e.text + "';"
     }, function () {
