@@ -15,4 +15,4 @@ var onClickMenu = function(e) {
     console.log('response !');
     console.log(response);
   });
-}
+};
