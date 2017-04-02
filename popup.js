@@ -1229,10 +1229,9 @@ var allItems = {
             { "s": "┏(-_-)┓", "t": "dance", "desc": "dance" },
         ]
     },
-   
 };
 
-var init = function () {
+var init = function() {
     // nav html
     var i = 0;
     var html;
@@ -1248,13 +1247,15 @@ var init = function () {
         $('section#content').append('<div class="category" id="' + category + '" style="display:none;"></div>');
     }
     // nav click
-    $("nav ul li").click(function (el) {
+    $("nav ul li").click(function(el) {
         $('section#content div.category').hide();
         $('nav ul li').removeClass('on');
         $('section#search').hide();
         $(el).addClass('on');
-        if(allItems[$(el.target).attr('data-category')].searchable) {
-            $('section#search').show();
+        if(allItems[$(el.target).attr('data-category')]) {
+            if (allItems[$(el.target).attr('data-category')].searchable) {
+                $('section#search').show();
+            }
         }
         $('section#content div.category#' + $(el.target).attr('data-category')).show();
     });
@@ -1273,49 +1274,56 @@ var init = function () {
     // search handler
     $('#q').keyup(function() {
         var val = $('#q').val();
-        if(val == '') {
+        if (val == '') {
             $('section#content div.category#emojis button').each(function(idx) {
                 $(this).show();
             });
-        }
-        else {
+        } else {
             var keywords = [];
-            if(val.indexOf(' ')>=0) {
+            if (val.indexOf(' ') >= 0) {
                 keywords = val.split(' ');
-            }
-            else {
+            } else {
                 keywords.push(val);
             }
             $('section#content div.category#emojis button').each(function(idx) {
                 $(this).hide();
                 var nbFoundKeywords = 0;
-                for(var i in keywords) {
+                for (var i in keywords) {
                     searchIn = $(this).attr('data-clipboard-tags') + ' ' + $(this).attr('data-clipboard-description');
                     searchInArr = searchIn.split(' ');
-                    for(var j in searchInArr) {
-                        if(searchInArr[j].indexOf(keywords[i])>=0) {    
-                            nbFoundKeywords ++;
+                    for (var j in searchInArr) {
+                        if (searchInArr[j].indexOf(keywords[i]) >= 0) {
+                            nbFoundKeywords++;
                         }
                     }
                 }
-                if(nbFoundKeywords >= keywords.length) {
+                if (nbFoundKeywords >= keywords.length) {
                     $(this).show();
                 }
             });
         }
-        
+
     });
-    // gestion du clic
+    // gestion du clic sur un item
     $("section#content button").on("click", function() {
         $('#selection').val($('#selection').val() + $(this).attr('data-clipboard-text'));
-        var copyFrom = document.createElement("textarea");
-        copyFrom.textContent =  $('#selection').val();
-        var body = document.getElementsByTagName('body')[0];
-        body.appendChild(copyFrom);
-        copyFrom.select();
-        document.execCommand('copy');
-        body.removeChild(copyFrom);
+        copyToClipboard();
+    });
+    // gestion du clic sur le bouton effacer
+    $("#selection-remove").on("click", function() {
+        $('#selection').val('');
+        copyToClipboard();
     });
 };
 
 init();
+
+function copyToClipboard() {
+    var copyFrom = document.createElement("textarea");
+    copyFrom.textContent = $('#selection').val();
+    var body = document.getElementsByTagName('body')[0];
+    body.appendChild(copyFrom);
+    copyFrom.select();
+    document.execCommand('copy');
+    body.removeChild(copyFrom);
+}
