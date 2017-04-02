@@ -2,7 +2,7 @@
 
 A simple chrome extension to troll your chats, jira tickets, emails, forum posts, comments...
 
-<img src="mark/screenshot-640x400.png">
+<img src="mark/screenshot-1280x800.png">
 
 ## changelog
 
