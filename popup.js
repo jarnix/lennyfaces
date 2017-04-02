@@ -1251,7 +1251,7 @@ var init = function() {
         $('section#content div.category').hide();
         $('nav ul li').removeClass('on');
         $('section#search').hide();
-        $(el).addClass('on');
+        $(el.target).addClass('on');
         if(allItems[$(el.target).attr('data-category')]) {
             if (allItems[$(el.target).attr('data-category')].searchable) {
                 $('section#search').show();
