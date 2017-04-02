@@ -58,7 +58,12 @@
         border-width: 1px;
         margin: 2px;
       }
-
+      .item.emojis {
+        font-size: 16px;
+        width: 50px;
+        height: 50px;
+        padding: 10px 10px 10px 10px;
+      }
       .item:hover {
         background: #acdeff;
         text-decoration: none;
@@ -77,7 +82,7 @@
         padding-right: 8px;
         padding-top: 5px;
         padding-bottom: 5px;
-        margin-right: 8px;
+        margin-right: 2px;
         text-align: center;
         background-color: white;
         border:1px solid #3cb0fd;
@@ -116,9 +121,25 @@
 
       section#content {
         overflow-y: scroll;
-        height: 326px;
+        height: 350px;
         background-color: white;
         margin-bottom: 5px;
+      }
+
+      section#content p {
+        padding-bottom: 10px;
+      }
+
+      section#search {
+        background-color:#ddd;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+
+      section#search input {
+        display:block;
+        width:100%;
+        padding:5px;
       }
 
       div.category#about {
@@ -126,6 +147,39 @@
         font-size:90%;
       }
 
+      footer {
+        height:36px;
+      }
+      #selection-title {
+        width:60px;
+        float:left;
+        line-height: 26px;
+      }
+      input#selection {
+        width: 240px;
+        padding: 3px;
+        float:left;
+        margin-right:5px;
+      }
+      #selection-remove {
+        float:left;
+        font-weight:bold;
+        font-size:14px;
+        width:24px;
+        height:24px;
+        padding-top:4px;
+        text-align:center;
+        background-color:white;
+        color:black;
+        -webkit-border-radius: 5;
+        -moz-border-radius: 5;
+        border-radius: 5px;
+        -webkit-box-shadow: 0px 1px 1px #666666;
+        -moz-box-shadow: 0px 1px 1px #666666;
+        box-shadow: 0px 1px 1px #666666;
+        clear:right;
+        cursor:pointer;
+      }
     </style>
 
 
@@ -135,11 +189,11 @@
   </head>
   <body>
 
-    <h1>Lenny Faces * Ascii Art * Special Chars</h1>
+    <h1>Emojis * Faces * Unicode</h1>
 
     <h2>
-      1) click on an item to copy it to your clipboard<br>
-      2) paste it into your text!
+      1) click on an item to copy it<br>
+      2) paste it! (it's already in your clipboard)
     </h2>
 
     <nav>
@@ -152,30 +206,36 @@
       <div class="cb"></div>
     </nav>
 
+    <section id="search">
+      <input type="text" id="q" placeholder="type to search...">
+    </section>
+
     <section id="content">
 
       <div class="category" id="about" style="display:none;">
 
-        This extension allows you to troll your chats with emojis, single line ascii/unicode art, dingbats, etc.
+        <p>
+          This extension allows you to troll your chats with emojis, unicode, etc.
+        </p>
 
-        <br><br>
+        <p>
+          Support: <a target="_blank" href="https://twitter.com/jarnix">@jarnix</a><br>
+        </p>
 
-        Support: <a target="_blank" href="https://twitter.com/jarnix">@jarnix</a><br>
+        <p>
+          <a target="_blank" href="https://supporterhq.com/give/520bdb77ce4f2241fcb4919a56393242"><img src="https://supporterhq.com/api/b/520bdb77ce4f2241fcb4919a56393242"></a>
+        </p>
 
-        <br><br>
-
-        <a target="_blank" href="https://tips.60devs.com/tip/520bdb77ce4f2241fcb4919a56393242"><img src="https://camo.githubusercontent.com/d59abd040690a9df5a481ecf1fbf00571cf60134/68747470733a2f2f746970732e3630646576732e636f6d2f696d616765732f627574746f6e2d626c61636b2e737667" alt="Tips" data-canonical-src="https://tips.60devs.com/images/button-black.svg" style="max-width:100%;"></a>
-
-        <br><br>
-
-        Enjoy!
+        <p>
+          Enjoy!
+        </p>
 
       </div>
 
     </section>
 
     <footer>
-      Selection: <span id="selection"></span>
+      <div id="selection-title">Selection:</div> <input type="text" id="selection"> <div id="selection-remove" title="clear selection">x</div>
     </footer>
 
     <script src="popup.js"></script>
