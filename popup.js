@@ -1,11 +1,12 @@
 var allItems = {
     'emojis': {
         'title': 'Emojis 😃',
+        'searchable' : true,
         'items': [
             { "s": "😀", "t": "face grin", "d": "grinning face" },
             { "s": "😁", "t": "eye face grin smile", "d": "grinning face with smiling eyes" },
             { "s": "😂", "t": "face joy laugh tear", "d": "face with tears of joy" },
-            { "s": "🤣", "t": "face floor laugh rolling", "d": "rolling on the floor laughing" },
+            { "s": "🙃", "t": "face floor laugh rolling", "d": "rolling on the floor laughing" },
             { "s": "😃", "t": "face mouth open smile", "d": "smiling face with open mouth" },
             { "s": "😄", "t": "eye face mouth open smile", "d": "smiling face with open mouth & smiling eyes" },
             { "s": "😅", "t": "cold face open smile sweat", "d": "smiling face with open mouth & cold sweat" },
@@ -19,7 +20,7 @@ var allItems = {
             { "s": "😗", "t": "face kiss", "d": "kissing face" },
             { "s": "😙", "t": "eye face kiss smile", "d": "kissing face with smiling eyes" },
             { "s": "😚", "t": "closed eye face kiss", "d": "kissing face with closed eyes" },
-            { "s": "☺", "t": "face outlined relaxed smile", "d": "smiling face" },
+            { "s": "😛", "t": "face outlined relaxed smile", "d": "smiling face" },
             { "s": "🙂", "t": "face smile", "d": "slightly smiling face" },
             { "s": "🤗", "t": "face hug hugging", "d": "hugging face" },
             { "s": "🤔", "t": "face thinking", "d": "thinking face" },
@@ -40,7 +41,7 @@ var allItems = {
             { "s": "😛", "t": "face tongue", "d": "face with stuck-out tongue" },
             { "s": "😜", "t": "eye face joke tongue wink", "d": "face with stuck-out tongue & winking eye" },
             { "s": "😝", "t": "eye face horrible taste tongue", "d": "face with stuck-out tongue & closed eyes" },
-            { "s": "🤤", "t": "drooling face", "d": "drooling face" },
+            /*{ "s": "🤤", "t": "drooling face", "d": "drooling face" },*/
             { "s": "😒", "t": "face unamused unhappy", "d": "unamused face" },
             { "s": "😓", "t": "cold face sweat", "d": "face with cold sweat" },
             { "s": "😔", "t": "dejected face pensive", "d": "pensive face" },
@@ -48,7 +49,7 @@ var allItems = {
             { "s": "🙃", "t": "face upside-down", "d": "upside-down face" },
             { "s": "🤑", "t": "face money mouth", "d": "money-mouth face" },
             { "s": "😲", "t": "astonished face shocked totally", "d": "astonished face" },
-            { "s": "☹", "t": "face frown", "d": "frowning face" },
+            /*{ "s": "☹", "t": "face frown", "d": "frowning face" },*/
             { "s": "🙁", "t": "face frown", "d": "slightly frowning face" },
             { "s": "😖", "t": "confounded face", "d": "confounded face" },
             { "s": "😞", "t": "disappointed face", "d": "disappointed face" },
@@ -70,12 +71,14 @@ var allItems = {
             { "s": "😷", "t": "cold doctor face mask medicine sick", "d": "face with medical mask" },
             { "s": "🤒", "t": "face ill sick thermometer", "d": "face with thermometer" },
             { "s": "🤕", "t": "bandage face hurt injury", "d": "face with head-bandage" },
-            { "s": "🤢", "t": "face nauseated vomit", "d": "nauseated face" },
-            { "s": "🤧", "t": "face gesundheit sneeze", "d": "sneezing face" },
+            /*{ "s": "🤢", "t": "face nauseated vomit", "d": "nauseated face" },*/
+            /*{ "s": "🤧", "t": "face gesundheit sneeze", "d": "sneezing face" },*/
             { "s": "😇", "t": "angel face fairy tale fantasy halo innocent smile", "d": "smiling face with halo" },
+            /*
             { "s": "🤠", "t": "cowboy cowgirl face hat", "d": "cowboy hat face" },
             { "s": "🤡", "t": "clown face", "d": "clown face" },
             { "s": "🤥", "t": "face lie pinocchio", "d": "lying face" },
+            */
             { "s": "🤓", "t": "face geek nerd", "d": "nerd face" },
             { "s": "😈", "t": "face fairy tale fantasy horns smile", "d": "smiling face with horns" },
             { "s": "👿", "t": "demon devil face fairy tale fantasy imp", "d": "angry face with horns" },
@@ -100,11 +103,13 @@ var allItems = {
             { "s": "🙈", "t": "evil face forbidden gesture monkey no not prohibited see", "d": "see-no-evil monkey" },
             { "s": "🙉", "t": "evil face forbidden gesture hear monkey no not prohibited", "d": "hear-no-evil monkey" },
             { "s": "🙊", "t": "evil face forbidden gesture monkey no not prohibited speak", "d": "speak-no-evil monkey" },
+            /*
             { "s": "🏻", "t": "skin tone type 1–2", "d": "light skin tone" },
             { "s": "🏼", "t": "skin tone type 3", "d": "medium-light skin tone" },
             { "s": "🏽", "t": "skin tone type 4", "d": "medium skin tone" },
             { "s": "🏾", "t": "skin tone type 5", "d": "medium-dark skin tone" },
             { "s": "🏿", "t": "skin tone type 6", "d": "dark skin tone" },
+            */
             { "s": "👶", "t": "baby young", "d": "baby" },
             { "s": "👦", "t": "boy young", "d": "boy" },
             { "s": "👧", "t": "Virgo young zodiac", "d": "girl" },
@@ -588,10 +593,12 @@ var allItems = {
             { "s": "🚡", "t": "aerial cable car gondola tramway", "d": "aerial tramway" },
             { "s": "🛰", "t": "space", "d": "satellite" },
             { "s": "🚀", "t": "space", "d": "rocket" },
+            /*
             { "s": "🛎", "t": "bell bellhop hotel", "d": "bellhop bell" },
             { "s": "🚪", "t": "door", "d": "door" },
             { "s": "🛏", "t": "hotel sleep", "d": "bed" },
             { "s": "🛋", "t": "couch hotel lamp", "d": "couch and lamp" },
+            */
             { "s": "🚽", "t": "toilet", "d": "toilet" },
             { "s": "🚿", "t": "water", "d": "shower" },
             { "s": "🛁", "t": "bath", "d": "bathtub" },
@@ -599,6 +606,7 @@ var allItems = {
             { "s": "⏳", "t": "hourglass sand timer", "d": "hourglass with flowing sand" },
             { "s": "⌚", "t": "clock", "d": "watch" },
             { "s": "⏰", "t": "alarm clock", "d": "alarm clock" },
+            /*
             { "s": "⏱", "t": "clock", "d": "stopwatch" },
             { "s": "⏲", "t": "clock timer", "d": "timer clock" },
             { "s": "🕰", "t": "clock", "d": "mantelpiece clock" },
@@ -626,6 +634,7 @@ var allItems = {
             { "s": "🕥", "t": "10 10:30 30 clock ten thirty", "d": "ten-thirty" },
             { "s": "🕚", "t": "00 11 11:00 clock eleven o’clock", "d": "eleven o’clock" },
             { "s": "🕦", "t": "11 11:30 30 clock eleven thirty", "d": "eleven-thirty" },
+            */
             { "s": "🌑", "t": "dark moon", "d": "new moon" },
             { "s": "🌒", "t": "crescent moon waxing", "d": "waxing crescent moon" },
             { "s": "🌓", "t": "moon quarter", "d": "first quarter moon" },
@@ -644,6 +653,7 @@ var allItems = {
             { "s": "🌞", "t": "bright face sun", "d": "sun with face" },
             { "s": "⭐", "t": "star", "d": "white medium star" },
             { "s": "🌟", "t": "glittery glow shining sparkle star", "d": "glowing star" },
+            /*
             { "s": "🌠", "t": "falling shooting star", "d": "shooting star" },
             { "s": "☁", "t": "weather", "d": "cloud" },
             { "s": "⛅", "t": "cloud sun", "d": "sun behind cloud" },
@@ -666,6 +676,7 @@ var allItems = {
             { "s": "⚡", "t": "danger electric electricity lightning voltage zap", "d": "high voltage" },
             { "s": "❄", "t": "cold snow", "d": "snowflake" },
             { "s": "☃", "t": "cold snow", "d": "snowman" },
+            */
             { "s": "⛄", "t": "cold snow snowman", "d": "snowman without snow" },
             { "s": "☄", "t": "space", "d": "comet" },
             { "s": "🔥", "t": "flame tool", "d": "fire" },
@@ -720,6 +731,7 @@ var allItems = {
             { "s": "🎽", "t": "athletics running sash shirt", "d": "running shirt" },
             { "s": "🎿", "t": "ski snow", "d": "skis" },
             { "s": "🎮", "t": "controller game", "d": "video game" },
+            /*
             { "s": "🕹", "t": "game video game", "d": "joystick" },
             { "s": "🎲", "t": "dice die game", "d": "game die" },
             { "s": "♠", "t": "card game", "d": "spade suit" },
@@ -746,12 +758,14 @@ var allItems = {
             { "s": "🎛", "t": "control knobs music", "d": "control knobs" },
             { "s": "🎤", "t": "karaoke mic", "d": "microphone" },
             { "s": "🎧", "t": "earbud", "d": "headphone" },
-            { "s": "📻", "t": "video</th>code:U+1F3B7", "d": "radio" },
+            { "s": "📻", "t": "video", "d": "radio" },
+            */
             { "s": "🎸", "t": "instrument music", "d": "guitar" },
             { "s": "🎹", "t": "instrument keyboard music piano", "d": "musical keyboard" },
             { "s": "🎺", "t": "instrument music", "d": "trumpet" },
             { "s": "🎻", "t": "instrument music", "d": "violin" },
             { "s": "🥁", "t": "drum drumsticks music", "d": "drum" },
+            /*
             { "s": "📱", "t": "cell mobile phone telephone", "d": "mobile phone" },
             { "s": "📲", "t": "arrow call cell mobile phone receive telephone", "d": "mobile phone with arrow" },
             { "s": "☎", "t": "phone", "d": "telephone" },
@@ -773,10 +787,12 @@ var allItems = {
             { "s": "🎥", "t": "camera cinema movie", "d": "movie camera" },
             { "s": "🎞", "t": "cinema film frames movie", "d": "film frames" },
             { "s": "📽", "t": "cinema film movie projector video", "d": "film projector" },
+            */
             { "s": "🎬", "t": "clapper movie", "d": "clapper board" },
             { "s": "📺", "t": "tv video", "d": "television" },
             { "s": "📷", "t": "video", "d": "camera" },
             { "s": "📸", "t": "camera flash video", "d": "camera with flash" },
+            /*
             { "s": "📹", "t": "camera video", "d": "video camera" },
             { "s": "📼", "t": "tape vhs video", "d": "videocassette" },
             { "s": "🔍", "t": "glass magnifying search tool", "d": "left-pointing magnifying glass" },
@@ -839,8 +855,10 @@ var allItems = {
             { "s": "📁", "t": "file folder", "d": "file folder" },
             { "s": "📂", "t": "file folder open", "d": "open file folder" },
             { "s": "🗂", "t": "card dividers index", "d": "card index dividers" },
+            */
             { "s": "📅", "t": "date", "d": "calendar" },
             { "s": "📆", "t": "calendar", "d": "tear-off calendar" },
+            /*
             { "s": "🗒", "t": "note pad spiral", "d": "spiral notepad" },
             { "s": "🗓", "t": "calendar pad spiral", "d": "spiral calendar" },
             { "s": "📇", "t": "card index rolodex", "d": "card index" },
@@ -862,9 +880,13 @@ var allItems = {
             { "s": "🔓", "t": "lock open unlock", "d": "unlocked" },
             { "s": "🔏", "t": "ink lock nib pen privacy", "d": "locked with pen" },
             { "s": "🔐", "t": "closed key lock secure", "d": "locked with key" },
+            */
             { "s": "🔑", "t": "lock password", "d": "key" },
+            /*
             { "s": "🗝", "t": "clue key lock old", "d": "old key" },
+            */
             { "s": "🔨", "t": "tool", "d": "hammer" },
+            /*
             { "s": "⛏", "t": "mining tool", "d": "pick" },
             { "s": "⚒", "t": "hammer pick tool", "d": "hammer and pick" },
             { "s": "🛠", "t": "hammer spanner tool wrench", "d": "hammer and wrench" },
@@ -881,9 +903,11 @@ var allItems = {
             { "s": "⚖", "t": "balance justice Libra scales tool weight zodiac", "d": "balance scale" },
             { "s": "🔗", "t": "link", "d": "link" },
             { "s": "⛓", "t": "chain", "d": "chains" },
+            */
             { "s": "💉", "t": "doctor medicine needle shot sick tool", "d": "syringe" },
             { "s": "💊", "t": "doctor medicine sick", "d": "pill" },
             { "s": "🚬", "t": "smoking", "d": "cigarette" },
+            /*
             { "s": "⚰", "t": "death", "d": "coffin" },
             { "s": "⚱", "t": "ashes death funeral urn", "d": "funeral urn" },
             { "s": "🗿", "t": "face moyai statue", "d": "moai" },
@@ -1088,10 +1112,12 @@ var allItems = {
             { "s": "🎌", "t": "celebration cross crossed Japanese", "d": "crossed flags" },
             { "s": "🏴", "t": "waving", "d": "black flag" },
             { "s": "🏳", "t": "waving", "d": "white flag" },
+            */
         ]
     },
     'faces': {
-        'title': 'Text Faces (ಠ_ಠ)',
+        'title': 'Faces (ಠ_ಠ)',
+        'searchable' : false,
         'items': [
             { "s": "( ͡° ͜ʖ ͡°)", "t": "face lenny", "desc": "lenny face" },
             { "s": "ᕦ( ͡° ͜ʖ ͡°)ᕤ", "t": "face lenny", "desc": "lenny face" },
@@ -1127,7 +1153,8 @@ var allItems = {
         ]
     },
     'emoticons': {
-        'title': 'Unicode Emoticons ༼°□° ༽',
+        'title': 'Unicode ༼°□° ༽',
+        'searchable' : false,
         'items': [
             
             { "s": "(╯°□°）╯︵ ┻━┻", "t": "flip table upset", "desc": "throwing table" },
@@ -1206,7 +1233,7 @@ var allItems = {
 };
 
 var init = function () {
-    // nav
+    // nav html
     var i = 0;
     var html;
     var category;
@@ -1218,53 +1245,77 @@ var init = function () {
         i++;
         html += ' data-category="' + category + '">' + allItems[category].title + '</li>';
         $("nav ul").append(html);
-        $('section#content').append('<div class="category" id="' + category + '" style="display:none;">' + category + '</div>');
+        $('section#content').append('<div class="category" id="' + category + '" style="display:none;"></div>');
     }
+    // nav click
     $("nav ul li").click(function (el) {
-        console.log(el.target);
         $('section#content div.category').hide();
         $('nav ul li').removeClass('on');
+        $('section#search').hide();
         $(el).addClass('on');
+        if(allItems[$(el.target).attr('data-category')].searchable) {
+            $('section#search').show();
+        }
         $('section#content div.category#' + $(el.target).attr('data-category')).show();
     });
     for (category in allItems) {
         $('section#content div.category#' + category).show();
         break;
     }
-
-    // content
+    // content html
     for (category in allItems) {
         html = '';
         for (var item in allItems[category].items) {
-            html += '<button class="' + category + ' item" data-clipboard-text="' + allItems[category].items[item].s + '">' + allItems[category].items[item].s + '</button>';
+            html += '<button class="' + category + ' item" title="' + allItems[category].items[item].d + '" data-clipboard-text="' + allItems[category].items[item].s + '" data-clipboard-tags="' + allItems[category].items[item].t + '" data-clipboard-description="' + allItems[category].items[item].d + '">' + allItems[category].items[item].s + '</button>';
         }
         $('section#content div.category#' + category).html(html);
     }
+    // search handler
+    $('#q').keyup(function() {
+        var val = $('#q').val();
+        if(val == '') {
+            $('section#content div.category#emojis button').each(function(idx) {
+                $(this).show();
+            });
+        }
+        else {
+            var keywords = [];
+            if(val.indexOf(' ')>=0) {
+                keywords = val.split(' ');
+            }
+            else {
+                keywords.push(val);
+            }
+            $('section#content div.category#emojis button').each(function(idx) {
+                $(this).hide();
+                var nbFoundKeywords = 0;
+                for(var i in keywords) {
+                    searchIn = $(this).attr('data-clipboard-description'); // $(this).attr('data-clipboard-tags') + ' ' +
+                    searchInArr = searchIn.split(' ');
+                    for(var j in searchInArr) {
+                        if(searchInArr[j].indexOf(keywords[i])>=0) {    
+                            nbFoundKeywords ++;
+                        }
+                    }
+                }
+                if(nbFoundKeywords >= keywords.length) {
+                    $(this).show();
+                }
+            });
+        }
+        
+    });
+    // gestion du clic
+    $("section#content button").on("click", function() {
+        $('#selection').val($('#selection').val() + $(this).attr('data-clipboard-text'));
+        var copyFrom = document.createElement("textarea");
+        copyFrom.textContent =  $('#selection').val();
+        var body = document.getElementsByTagName('body')[0];
+        body.appendChild(copyFrom);
+        copyFrom.select();
+        document.execCommand('copy');
+        body.removeChild(copyFrom);
+    });
 };
 
-/*
-var addSelectorBelowInput = function () {
-    chrome.runtime.sendMessage({
-        action: 'addSelectorBelowInput'
-    }, function (response) {
-
-    });
-}
-*/
-
 init();
-
-var clipboard = new Clipboard('.item');
-clipboard.on('success', function (e) {
-
-    $('#selection').text(e.text);
-
-    chrome.tabs.executeScript(null, {
-        code: "var toPaste = '" + e.text + "';"
-    }, function () {
-        chrome.tabs.executeScript(null, {
-            file: "paste.js"
-        });
-    });
-    e.clearSelection();
-});

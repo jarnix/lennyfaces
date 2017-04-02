@@ -1,6 +1,6 @@
 chrome.runtime.onInstalled.addListener(function () {
     chrome.contextMenus.create({
-        title: "lenny face + ascii art + special chars",
+        title: "emojis + lenny faces + unicode",
         id: 'lennyfaceasciiartspecialchars',
         contexts: ["editable"],
         onclick: onClickMenu
@@ -8,11 +8,13 @@ chrome.runtime.onInstalled.addListener(function () {
 });
 
 var onClickMenu = function(e) {
-  console.log('onclick');
+  // console.log('onclick');
   chrome.runtime.sendMessage({
       action: 'addSelectorBelowInput'
   }, function (response) {
+    /*
     console.log('response !');
     console.log(response);
+    */
   });
 };
