@@ -1266,7 +1266,7 @@ var init = function () {
     for (category in allItems) {
         html = '';
         for (var item in allItems[category].items) {
-            html += '<button class="' + category + ' item" title="' + allItems[category].items[item].d + '" data-clipboard-text="' + allItems[category].items[item].s + '" data-clipboard-tags="' + allItems[category].items[item].t + '" data-clipboard-description="' + allItems[category].items[item].d + '">' + allItems[category].items[item].s + '</button>';
+            html += '<button class="' + category + ' item" title="' + allItems[category].items[item].d + ' (' + allItems[category].items[item].t + ')' + '" data-clipboard-text="' + allItems[category].items[item].s + '" data-clipboard-tags="' + allItems[category].items[item].t + '" data-clipboard-description="' + allItems[category].items[item].d + '">' + allItems[category].items[item].s + '</button>';
         }
         $('section#content div.category#' + category).html(html);
     }
@@ -1290,7 +1290,7 @@ var init = function () {
                 $(this).hide();
                 var nbFoundKeywords = 0;
                 for(var i in keywords) {
-                    searchIn = $(this).attr('data-clipboard-description'); // $(this).attr('data-clipboard-tags') + ' ' +
+                    searchIn = $(this).attr('data-clipboard-tags') + ' ' + $(this).attr('data-clipboard-description');
                     searchInArr = searchIn.split(' ');
                     for(var j in searchInArr) {
                         if(searchInArr[j].indexOf(keywords[i])>=0) {    
